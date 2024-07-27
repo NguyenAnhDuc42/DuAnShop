@@ -28,211 +28,288 @@
         /// </summary>
         private void InitializeComponent()
         {
-            btn_sua14 = new Button();
-            btn_add14 = new Button();
-            dtg_giamgia1 = new DataGridView();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(GiamGia1));
+            panel1 = new Panel();
+            label8 = new Label();
+            label7 = new Label();
+            label6 = new Label();
+            label5 = new Label();
+            label4 = new Label();
+            button2 = new Button();
+            label2 = new Label();
+            txt_timkiemgiamgia = new TextBox();
             txt_loaigiamgia1 = new TextBox();
             txt_mucgiam1 = new TextBox();
             txt_ngaybatdau1 = new TextBox();
             txt_ngayketthuc2 = new TextBox();
             cmbx_trangthai2 = new ComboBox();
-            label1 = new Label();
-            label2 = new Label();
+            panel2 = new Panel();
             label3 = new Label();
-            label4 = new Label();
-            label5 = new Label();
-            label6 = new Label();
-            label7 = new Label();
-            btn_save1 = new Button();
+            label1 = new Label();
+            dtg_giamgia1 = new DataGridView();
+            panel3 = new Panel();
+            btn_sua14 = new Button();
+            btn_add14 = new Button();
+            panel1.SuspendLayout();
+            panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dtg_giamgia1).BeginInit();
+            panel3.SuspendLayout();
             SuspendLayout();
             // 
-            // btn_sua14
+            // panel1
             // 
-            btn_sua14.Location = new Point(600, 666);
-            btn_sua14.Name = "btn_sua14";
-            btn_sua14.Size = new Size(194, 118);
-            btn_sua14.TabIndex = 27;
-            btn_sua14.Text = "Sua";
-            btn_sua14.UseVisualStyleBackColor = true;
-            btn_sua14.Click += btn_sua14_Click;
+            panel1.BackColor = SystemColors.ControlLightLight;
+            panel1.BorderStyle = BorderStyle.FixedSingle;
+            panel1.Controls.Add(label8);
+            panel1.Controls.Add(label7);
+            panel1.Controls.Add(label6);
+            panel1.Controls.Add(label5);
+            panel1.Controls.Add(label4);
+            panel1.Controls.Add(button2);
+            panel1.Controls.Add(label2);
+            panel1.Controls.Add(txt_timkiemgiamgia);
+            panel1.Controls.Add(txt_loaigiamgia1);
+            panel1.Controls.Add(txt_mucgiam1);
+            panel1.Controls.Add(txt_ngaybatdau1);
+            panel1.Controls.Add(txt_ngayketthuc2);
+            panel1.Controls.Add(cmbx_trangthai2);
+            panel1.Location = new Point(25, 22);
+            panel1.Name = "panel1";
+            panel1.Size = new Size(925, 735);
+            panel1.TabIndex = 0;
             // 
-            // btn_add14
+            // label8
             // 
-            btn_add14.Location = new Point(128, 666);
-            btn_add14.Name = "btn_add14";
-            btn_add14.Size = new Size(194, 118);
-            btn_add14.TabIndex = 26;
-            btn_add14.Text = "Add";
-            btn_add14.UseVisualStyleBackColor = true;
-            btn_add14.Click += btn_add14_Click;
-            // 
-            // dtg_giamgia1
-            // 
-            dtg_giamgia1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dtg_giamgia1.Location = new Point(983, 44);
-            dtg_giamgia1.Name = "dtg_giamgia1";
-            dtg_giamgia1.RowHeadersWidth = 62;
-            dtg_giamgia1.Size = new Size(628, 929);
-            dtg_giamgia1.TabIndex = 23;
-            dtg_giamgia1.CellClick += dtg_giamgia1_CellClick;
-            // 
-            // txt_loaigiamgia1
-            // 
-            txt_loaigiamgia1.Location = new Point(152, 122);
-            txt_loaigiamgia1.Name = "txt_loaigiamgia1";
-            txt_loaigiamgia1.Size = new Size(447, 31);
-            txt_loaigiamgia1.TabIndex = 28;
-            // 
-            // txt_mucgiam1
-            // 
-            txt_mucgiam1.Location = new Point(749, 122);
-            txt_mucgiam1.Name = "txt_mucgiam1";
-            txt_mucgiam1.Size = new Size(144, 31);
-            txt_mucgiam1.TabIndex = 29;
-            // 
-            // txt_ngaybatdau1
-            // 
-            txt_ngaybatdau1.Location = new Point(152, 231);
-            txt_ngaybatdau1.Name = "txt_ngaybatdau1";
-            txt_ngaybatdau1.Size = new Size(293, 31);
-            txt_ngaybatdau1.TabIndex = 30;
-            // 
-            // txt_ngayketthuc2
-            // 
-            txt_ngayketthuc2.Location = new Point(600, 231);
-            txt_ngayketthuc2.Name = "txt_ngayketthuc2";
-            txt_ngayketthuc2.Size = new Size(293, 31);
-            txt_ngayketthuc2.TabIndex = 31;
-            // 
-            // cmbx_trangthai2
-            // 
-            cmbx_trangthai2.FormattingEnabled = true;
-            cmbx_trangthai2.Location = new Point(335, 357);
-            cmbx_trangthai2.Name = "cmbx_trangthai2";
-            cmbx_trangthai2.Size = new Size(182, 33);
-            cmbx_trangthai2.TabIndex = 32;
-            // 
-            // label1
-            // 
-            label1.AutoSize = true;
-            label1.Location = new Point(29, 123);
-            label1.Name = "label1";
-            label1.Size = new Size(118, 25);
-            label1.TabIndex = 33;
-            label1.Text = "Loai giam gia";
-            // 
-            // label2
-            // 
-            label2.AutoSize = true;
-            label2.Location = new Point(635, 125);
-            label2.Name = "label2";
-            label2.Size = new Size(91, 25);
-            label2.TabIndex = 34;
-            label2.Text = "Muc giam";
-            // 
-            // label3
-            // 
-            label3.AutoSize = true;
-            label3.Location = new Point(29, 234);
-            label3.Name = "label3";
-            label3.Size = new Size(120, 25);
-            label3.TabIndex = 35;
-            label3.Text = "Ngay bat dau";
-            // 
-            // label4
-            // 
-            label4.AutoSize = true;
-            label4.Location = new Point(470, 234);
-            label4.Name = "label4";
-            label4.Size = new Size(122, 25);
-            label4.TabIndex = 36;
-            label4.Text = "Ngay ket thuc";
-            // 
-            // label5
-            // 
-            label5.AutoSize = true;
-            label5.Location = new Point(222, 360);
-            label5.Name = "label5";
-            label5.Size = new Size(89, 25);
-            label5.TabIndex = 37;
-            label5.Text = "Trang thai";
-            // 
-            // label6
-            // 
-            label6.AutoSize = true;
-            label6.Location = new Point(451, 234);
-            label6.Name = "label6";
-            label6.Size = new Size(16, 25);
-            label6.TabIndex = 38;
-            label6.Text = "|";
+            label8.AutoSize = true;
+            label8.Location = new Point(504, 333);
+            label8.Name = "label8";
+            label8.Size = new Size(89, 25);
+            label8.TabIndex = 83;
+            label8.Text = "Trạng thái";
             // 
             // label7
             // 
             label7.AutoSize = true;
-            label7.Location = new Point(613, 125);
+            label7.Location = new Point(104, 494);
             label7.Name = "label7";
-            label7.Size = new Size(16, 25);
-            label7.TabIndex = 39;
-            label7.Text = "|";
+            label7.Size = new Size(122, 25);
+            label7.TabIndex = 82;
+            label7.Text = "Ngày kết thúc";
             // 
-            // btn_save1
+            // label6
             // 
-            btn_save1.Location = new Point(382, 530);
-            btn_save1.Name = "btn_save1";
-            btn_save1.Size = new Size(171, 117);
-            btn_save1.TabIndex = 40;
-            btn_save1.Text = "Save";
-            btn_save1.UseVisualStyleBackColor = true;
-            btn_save1.Click += btn_save1_Click;
+            label6.AutoSize = true;
+            label6.Location = new Point(104, 410);
+            label6.Name = "label6";
+            label6.Size = new Size(120, 25);
+            label6.TabIndex = 81;
+            label6.Text = "Ngày bắt đầu";
+            // 
+            // label5
+            // 
+            label5.AutoSize = true;
+            label5.Location = new Point(104, 333);
+            label5.Name = "label5";
+            label5.Size = new Size(92, 25);
+            label5.TabIndex = 80;
+            label5.Text = "Mức giảm";
+            // 
+            // label4
+            // 
+            label4.AutoSize = true;
+            label4.Location = new Point(104, 247);
+            label4.Name = "label4";
+            label4.Size = new Size(118, 25);
+            label4.TabIndex = 79;
+            label4.Text = "Loại giảm giá";
+            // 
+            // button2
+            // 
+            button2.Enabled = false;
+            button2.FlatStyle = FlatStyle.Popup;
+            button2.Image = (Image)resources.GetObject("button2.Image");
+            button2.Location = new Point(824, 45);
+            button2.Margin = new Padding(4);
+            button2.Name = "button2";
+            button2.Size = new Size(52, 31);
+            button2.TabIndex = 78;
+            button2.UseVisualStyleBackColor = true;
+            // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.Location = new Point(333, 48);
+            label2.Name = "label2";
+            label2.Size = new Size(84, 25);
+            label2.TabIndex = 76;
+            label2.Text = "Tìm kiếm";
+            // 
+            // txt_timkiemgiamgia
+            // 
+            txt_timkiemgiamgia.BorderStyle = BorderStyle.FixedSingle;
+            txt_timkiemgiamgia.Location = new Point(423, 45);
+            txt_timkiemgiamgia.Name = "txt_timkiemgiamgia";
+            txt_timkiemgiamgia.Size = new Size(405, 31);
+            txt_timkiemgiamgia.TabIndex = 75;
+            txt_timkiemgiamgia.TextChanged += txt_timkiemgiamgia_TextChanged_1;
+            // 
+            // txt_loaigiamgia1
+            // 
+            txt_loaigiamgia1.BackColor = SystemColors.HighlightText;
+            txt_loaigiamgia1.Location = new Point(228, 244);
+            txt_loaigiamgia1.Name = "txt_loaigiamgia1";
+            txt_loaigiamgia1.Size = new Size(573, 31);
+            txt_loaigiamgia1.TabIndex = 62;
+            // 
+            // txt_mucgiam1
+            // 
+            txt_mucgiam1.Location = new Point(228, 330);
+            txt_mucgiam1.Name = "txt_mucgiam1";
+            txt_mucgiam1.Size = new Size(204, 31);
+            txt_mucgiam1.TabIndex = 63;
+            // 
+            // txt_ngaybatdau1
+            // 
+            txt_ngaybatdau1.Location = new Point(228, 410);
+            txt_ngaybatdau1.Name = "txt_ngaybatdau1";
+            txt_ngaybatdau1.Size = new Size(573, 31);
+            txt_ngaybatdau1.TabIndex = 64;
+            // 
+            // txt_ngayketthuc2
+            // 
+            txt_ngayketthuc2.Location = new Point(228, 494);
+            txt_ngayketthuc2.Name = "txt_ngayketthuc2";
+            txt_ngayketthuc2.Size = new Size(573, 31);
+            txt_ngayketthuc2.TabIndex = 65;
+            // 
+            // cmbx_trangthai2
+            // 
+            cmbx_trangthai2.FormattingEnabled = true;
+            cmbx_trangthai2.Location = new Point(619, 330);
+            cmbx_trangthai2.Name = "cmbx_trangthai2";
+            cmbx_trangthai2.Size = new Size(182, 33);
+            cmbx_trangthai2.TabIndex = 66;
+            // 
+            // panel2
+            // 
+            panel2.BackColor = SystemColors.ControlLightLight;
+            panel2.BorderStyle = BorderStyle.FixedSingle;
+            panel2.Controls.Add(label3);
+            panel2.Controls.Add(label1);
+            panel2.Controls.Add(dtg_giamgia1);
+            panel2.Location = new Point(985, 24);
+            panel2.Name = "panel2";
+            panel2.Size = new Size(637, 966);
+            panel2.TabIndex = 1;
+            // 
+            // label3
+            // 
+            label3.AutoSize = true;
+            label3.Location = new Point(-181, 336);
+            label3.Name = "label3";
+            label3.Size = new Size(120, 25);
+            label3.TabIndex = 69;
+            label3.Text = "Ngay bat dau";
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Location = new Point(-181, 225);
+            label1.Name = "label1";
+            label1.Size = new Size(118, 25);
+            label1.TabIndex = 67;
+            label1.Text = "Loai giam gia";
+            // 
+            // dtg_giamgia1
+            // 
+            dtg_giamgia1.BackgroundColor = SystemColors.ButtonFace;
+            dtg_giamgia1.BorderStyle = BorderStyle.None;
+            dtg_giamgia1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dtg_giamgia1.Location = new Point(17, 22);
+            dtg_giamgia1.Name = "dtg_giamgia1";
+            dtg_giamgia1.RowHeadersWidth = 62;
+            dtg_giamgia1.Size = new Size(600, 925);
+            dtg_giamgia1.TabIndex = 59;
+            dtg_giamgia1.CellClick += dtg_giamgia1_CellClick;
+            // 
+            // panel3
+            // 
+            panel3.BackColor = SystemColors.ControlLightLight;
+            panel3.BorderStyle = BorderStyle.FixedSingle;
+            panel3.Controls.Add(btn_sua14);
+            panel3.Controls.Add(btn_add14);
+            panel3.Location = new Point(27, 789);
+            panel3.Name = "panel3";
+            panel3.Size = new Size(923, 201);
+            panel3.TabIndex = 2;
+            // 
+            // btn_sua14
+            // 
+            btn_sua14.BackColor = SystemColors.Control;
+            btn_sua14.Font = new Font("Segoe UI", 11F);
+            btn_sua14.Location = new Point(606, 68);
+            btn_sua14.Name = "btn_sua14";
+            btn_sua14.Size = new Size(194, 73);
+            btn_sua14.TabIndex = 63;
+            btn_sua14.Text = "Sua";
+            btn_sua14.UseVisualStyleBackColor = false;
+            btn_sua14.Click += btn_sua14_Click;
+            // 
+            // btn_add14
+            // 
+            btn_add14.BackColor = SystemColors.Control;
+            btn_add14.Font = new Font("Segoe UI", 11F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            btn_add14.Location = new Point(103, 68);
+            btn_add14.Name = "btn_add14";
+            btn_add14.Size = new Size(194, 73);
+            btn_add14.TabIndex = 62;
+            btn_add14.Text = "Add";
+            btn_add14.UseVisualStyleBackColor = false;
+            btn_add14.Click += btn_add14_Click_1;
             // 
             // GiamGia1
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackColor = SystemColors.ButtonHighlight;
+            BackColor = SystemColors.ButtonFace;
             ClientSize = new Size(1650, 1016);
-            Controls.Add(btn_save1);
-            Controls.Add(label7);
-            Controls.Add(label6);
-            Controls.Add(label5);
-            Controls.Add(label4);
-            Controls.Add(label3);
-            Controls.Add(label2);
-            Controls.Add(label1);
-            Controls.Add(cmbx_trangthai2);
-            Controls.Add(txt_ngayketthuc2);
-            Controls.Add(txt_ngaybatdau1);
-            Controls.Add(txt_mucgiam1);
-            Controls.Add(txt_loaigiamgia1);
-            Controls.Add(btn_sua14);
-            Controls.Add(btn_add14);
-            Controls.Add(dtg_giamgia1);
+            Controls.Add(panel3);
+            Controls.Add(panel2);
+            Controls.Add(panel1);
             FormBorderStyle = FormBorderStyle.None;
             Name = "GiamGia1";
             Text = "GiamGia";
+            panel1.ResumeLayout(false);
+            panel1.PerformLayout();
+            panel2.ResumeLayout(false);
+            panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)dtg_giamgia1).EndInit();
+            panel3.ResumeLayout(false);
             ResumeLayout(false);
-            PerformLayout();
         }
 
         #endregion
 
-        private Button btn_sua14;
-        private Button btn_add14;
-        private DataGridView dtg_giamgia1;
+        private Panel panel1;
+        private TextBox txt_timkiemgiamgia;
         private TextBox txt_loaigiamgia1;
         private TextBox txt_mucgiam1;
         private TextBox txt_ngaybatdau1;
         private TextBox txt_ngayketthuc2;
         private ComboBox cmbx_trangthai2;
-        private Label label1;
-        private Label label2;
+        private Panel panel2;
         private Label label3;
-        private Label label4;
-        private Label label5;
-        private Label label6;
+        private Label label1;
+        private DataGridView dtg_giamgia1;
+        private Label label2;
+        private Label label8;
         private Label label7;
-        private Button btn_save1;
+        private Label label6;
+        private Label label5;
+        private Label label4;
+        private Button button2;
+        private Panel panel3;
+        private Button btn_sua14;
+        private Button btn_add14;
     }
 }

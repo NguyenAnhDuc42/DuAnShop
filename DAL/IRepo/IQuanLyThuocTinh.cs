@@ -9,6 +9,12 @@ namespace DAL.IRepo
 {
     public interface IQuanLyThuocTinh
     {
+        IEnumerable<HangSanPham> Find(Func<HangSanPham, bool> predicate);
+        IEnumerable<KichCo> Find(Func<KichCo, bool> predicate);
+        IEnumerable<MauSac> Find(Func<MauSac, bool> predicate);
+        IEnumerable<GiamGium> Find(Func<GiamGium, bool> predicate);
+        IEnumerable<GioiTinh> Find(Func<GioiTinh, bool> predicate);
+
 
         bool CreateHang(HangSanPham hang);
         bool UpdateHang(HangSanPham hang);

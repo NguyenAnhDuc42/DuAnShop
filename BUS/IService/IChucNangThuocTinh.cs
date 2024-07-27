@@ -9,6 +9,13 @@ namespace BUS.IService
 {
     public interface IChucNangThuocTinh
     {
+        IEnumerable<HangSanPham> TimKiemHang(string timkiemhang);
+        IEnumerable<MauSac> TimKiemMau(string timkiemmau);
+        IEnumerable<KichCo> TimKiemKichCo(string timkiemkichco);
+        IEnumerable<GioiTinh> TimKiemGioiTinh(string timkiemgioitinh);
+        IEnumerable<GiamGium> TimKiemGiamGia(string timkiemgiamgia);
+
+
         bool CreateGiamGiaSP(string loaigiamgia, decimal mucgiam, DateTime ngaybatdau, DateTime ngayketthuc, bool trangthai);
         bool UpdateGiamGiaSP(int idgiamgia, string loaigiamgia, decimal mucgiam, DateTime ngaybatdau, DateTime ngayketthuc, bool trangthai);
 

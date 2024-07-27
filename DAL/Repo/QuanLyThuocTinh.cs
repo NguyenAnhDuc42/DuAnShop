@@ -16,6 +16,15 @@ namespace DAL.Repo
         {
             _shopSanPhamContext = new ShopSanPhamContext();
         }
+
+        public IEnumerable<HangSanPham> Find(Func<HangSanPham, bool> predicate)
+        {
+            return _shopSanPhamContext.HangSanPhams
+            .Include(hsp => hsp.SanPhams)
+            .Where(predicate)
+            .ToList();
+        }
+
         public IEnumerable<SanPham> GetAllSanPhamsByGiamGiaId(int idGiamGia)
         {
             return _shopSanPhamContext.SanPhams.Where(sp => sp.IdGiamGia == idGiamGia).ToList();
@@ -222,6 +231,38 @@ namespace DAL.Repo
                 {
                     return false;
                 }
+        }
+
+        public IEnumerable<KichCo> Find(Func<KichCo, bool> predicate)
+        {
+            return _shopSanPhamContext.KichCos
+            .Include(kc => kc.SanPhams)
+            .Where(predicate)
+            .ToList();
+        }
+
+        public IEnumerable<MauSac> Find(Func<MauSac, bool> predicate)
+        {
+            return _shopSanPhamContext.MauSacs
+            .Include(mc => mc.SanPhams)
+            .Where(predicate)
+            .ToList();
+        }
+
+        public IEnumerable<GiamGium> Find(Func<GiamGium, bool> predicate)
+        {
+            return _shopSanPhamContext.GiamGia
+            .Include(gg => gg.SanPhams)
+            .Where(predicate)
+            .ToList();
+        }
+
+        public IEnumerable<GioiTinh> Find(Func<GioiTinh, bool> predicate)
+        {
+            return _shopSanPhamContext.GioiTinhs
+            .Include(gt => gt.SanPhams)
+            .Where(predicate)
+            .ToList();
         }
     }
 }

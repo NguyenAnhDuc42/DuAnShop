@@ -13,11 +13,11 @@ using System.Windows.Forms;
 
 namespace GUI
 {
-    public partial class KichCo1 : Form
+    public partial class KichCo2 : Form
     {
         private readonly IChucNangThuocTinh ser1;
         private int seletedid;
-        public KichCo1(IChucNangThuocTinh service1)
+        public KichCo2(IChucNangThuocTinh service1)
         {
             InitializeComponent();
             ser1 = service1;
@@ -81,6 +81,29 @@ namespace GUI
                 return;
             }
             LoadDataGrid3(ser1.GetAllKichCo());
+        }
+
+
+        private void txt_timkiemkichco_TextChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                string timkiem = txt_timkiemkichco.Text;
+                var result = ser1.TimKiemKichCo(timkiem);
+
+                if (result == null || !result.Any())
+                {
+                    MessageBox.Show("No data found.");
+                }
+                else
+                {
+                    LoadDataGrid3(result);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error searching KichCo: {ex.Message}");
+            }
         }
     }
 }

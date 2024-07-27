@@ -83,5 +83,11 @@ namespace GUI
             }
             LoadDataGrid4(ser.GetAllGioiTinh());
         }
+
+        private void txt_timkiemgioitinh_TextChanged(object sender, EventArgs e)
+        {
+            string timkiem = txt_timkiemgioitinh.Text;
+            LoadDataGrid4(ser.TimKiemGioiTinh(timkiem));
+        }
     }
 }

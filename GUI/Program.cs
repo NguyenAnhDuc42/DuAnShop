@@ -53,8 +53,8 @@ namespace GUI
             services.AddTransient<ThuocTinh>();
             services.AddTransient<Hang>();
             services.AddTransient<GioiTinh1>();
-            services.AddTransient<KichCo1>();
-            services.AddTransient<MauSac1>();
+            services.AddTransient<KichCo2>();
+            services.AddTransient<MauSac2>();
             services.AddTransient<GiamGia1>();
         }
     }

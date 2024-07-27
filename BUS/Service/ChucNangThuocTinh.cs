@@ -16,6 +16,9 @@ namespace BUS.Service
         {
             repos = repo;
         }
+
+
+
         public bool CreateGiamGiaSP(string loaigiamgia, decimal mucgiam, DateTime ngaybatdau, DateTime ngayketthuc, bool trangthai)
         {
             try
@@ -263,6 +266,55 @@ namespace BUS.Service
                 return false;
             }
             catch (Exception) { return false; }
+        }
+
+        public IEnumerable<HangSanPham> TimKiemHang(string timkiemhang)
+        {
+            return repos.Find(hsp => hsp.TenHang.Contains(timkiemhang));
+        }
+
+        public IEnumerable<MauSac> TimKiemMau(string timkiemmau)
+        {
+            return repos.Find(mc => mc.MauSac1.Contains(timkiemmau));
+        }
+
+        public IEnumerable<KichCo> TimKiemKichCo(string timkiemkichco)
+        {
+            if (string.IsNullOrEmpty(timkiemkichco))
+            {
+                return repos.GetAllKichCo();
+            }
+            var timkiemLower = timkiemkichco.Trim().ToLower();
+
+            return repos.Find(kc =>
+                kc.KichCo1.ToString().Contains(timkiemLower));
+
+        }
+
+        public IEnumerable<GioiTinh> TimKiemGioiTinh(string timkiemgioitinh)
+        {
+            return repos.Find(gt => gt.TenGioiTinh.Contains(timkiemgioitinh));
+        }
+
+        public IEnumerable<GiamGium> TimKiemGiamGia(string timkiemgiamgia)
+        {
+            if (string.IsNullOrEmpty(timkiemgiamgia))
+            {
+                return repos.GetAllGiamGia();
+            }
+
+            var timkiemLower = timkiemgiamgia.Trim().ToLower();
+
+            if (int.TryParse(timkiemgiamgia, out int timkiemGiamGiaInt))
+            {
+                return repos.Find(gg =>
+                    gg.LoaiGiamGia.ToLower().Contains(timkiemLower) ||
+                    gg.MucGiamGia.ToString().Contains(timkiemLower));
+            }
+            else
+            {
+                return repos.Find(gg => gg.LoaiGiamGia.ToLower().Contains(timkiemLower));
+            }
         }
     }
 }

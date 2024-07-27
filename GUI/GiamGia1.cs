@@ -48,6 +48,74 @@ namespace GUI
             }
         }
 
+        private void LoadComboBoxGG()
+        {
+            // Giả sử bạn muốn nạp các giá trị boolean (True/False) vào ComboBox
+            cmbx_trangthai2.Items.Clear();
+            cmbx_trangthai2.Items.Add("True");
+            cmbx_trangthai2.Items.Add("False");
+
+            // Nếu bạn muốn chọn một giá trị mặc định, ví dụ "True"
+            cmbx_trangthai2.SelectedIndex = 0;
+        }
+
+        private void txt_timkiemgiamgia_TextChanged_1(object sender, EventArgs e)
+        {
+            try
+            {
+                string timkiem = txt_timkiemgiamgia.Text;
+                var result = ser.TimKiemGiamGia(timkiem);
+
+                if (result == null || !result.Any())
+                {
+                    MessageBox.Show("No data found.");
+                }
+                else
+                {
+                    LoadDataGrid5(result);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error searching GiamGia: {ex.Message}");
+            }
+        }
+
+        private void btn_add14_Click_1(object sender, EventArgs e)
+        {
+            var ten = txt_loaigiamgia1.Text;
+            var mucgiam = Convert.ToInt32(txt_mucgiam1.Text);
+            var ngaybatdau = DateTime.Parse(txt_ngaybatdau1.Text);
+            var ngayketthuc = DateTime.Parse(txt_ngayketthuc2.Text);
+            bool trangthai = cmbx_trangthai2.SelectedItem.ToString() == "True";
+
+            if (!ser.CreateGiamGiaSP(ten, mucgiam, ngaybatdau, ngayketthuc, trangthai))
+            {
+                MessageBox.Show("Bị Trùng Thông Tin");
+                return;
+            }
+
+            LoadDataGrid5(ser.GetAllGiamGia());
+        }
+
+        private void btn_sua14_Click(object sender, EventArgs e)
+        {
+            var id = seletedid;
+            var ten = txt_loaigiamgia1.Text;
+            var mucgiam = Convert.ToDecimal(txt_mucgiam1.Text);
+            var ngaybatdau = DateTime.Parse(txt_ngaybatdau1.Text);
+            var ngayketthuc = DateTime.Parse(txt_ngayketthuc2.Text);
+            bool trangthai = cmbx_trangthai2.SelectedItem.ToString() == "True";
+
+            if (!ser.UpdateGiamGiaSP(id, ten, mucgiam, ngaybatdau, ngayketthuc, trangthai))
+            {
+                MessageBox.Show("Bị Trùng Thông Tin");
+                return;
+            }
+
+            LoadDataGrid5(ser.GetAllGiamGia());
+        }
+
         private void dtg_giamgia1_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             if (e.RowIndex >= 0)
@@ -73,54 +141,6 @@ namespace GUI
             }
         }
 
-        private void btn_add14_Click(object sender, EventArgs e)
-        {
-            var ten = txt_loaigiamgia1.Text;
-            var mucgiam = Convert.ToInt32(txt_mucgiam1.Text);
-            var ngaybatdau = DateTime.Parse(txt_ngaybatdau1.Text);
-            var ngayketthuc = DateTime.Parse(txt_ngayketthuc2.Text);
-            bool trangthai = cmbx_trangthai2.SelectedItem.ToString() == "True";
-
-            if (!ser.CreateGiamGiaSP(ten, mucgiam, ngaybatdau, ngayketthuc, trangthai))
-            {
-                MessageBox.Show("Bị Trùng Thông Tin");
-                return;
-            }
-
-            LoadDataGrid5(ser.GetAllGiamGia());
-        }
-        private void LoadComboBoxGG()
-        {
-            // Giả sử bạn muốn nạp các giá trị boolean (True/False) vào ComboBox
-            cmbx_trangthai2.Items.Clear();
-            cmbx_trangthai2.Items.Add("True");
-            cmbx_trangthai2.Items.Add("False");
-
-            // Nếu bạn muốn chọn một giá trị mặc định, ví dụ "True"
-            cmbx_trangthai2.SelectedIndex = 0;
-        }
-
-        private void btn_sua14_Click(object sender, EventArgs e)
-        {
-            var id = seletedid;
-            var ten = txt_loaigiamgia1.Text;
-            var mucgiam = Convert.ToDecimal(txt_mucgiam1.Text);
-            var ngaybatdau = DateTime.Parse(txt_ngaybatdau1.Text);
-            var ngayketthuc = DateTime.Parse(txt_ngayketthuc2.Text);
-            bool trangthai = cmbx_trangthai2.SelectedItem.ToString() == "True";
-
-            if (!ser.UpdateGiamGiaSP(id, ten, mucgiam, ngaybatdau, ngayketthuc, trangthai))
-            {
-                MessageBox.Show("Bị Trùng Thông Tin");
-                return;
-            }
-
-            LoadDataGrid5(ser.GetAllGiamGia());
-        }
-
-        private void btn_save1_Click(object sender, EventArgs e)
-        {   
-        }
 
 
         //private void LoadComboBoxStates()

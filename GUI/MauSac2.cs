@@ -12,11 +12,11 @@ using System.Windows.Forms;
 
 namespace GUI
 {
-    public partial class MauSac1 : Form
+    public partial class MauSac2 : Form
     {
         private readonly IChucNangThuocTinh ser;
         private int seletedid;
-        public MauSac1(IChucNangThuocTinh service)
+        public MauSac2(IChucNangThuocTinh service)
         {
             InitializeComponent();
             ser = service;
@@ -37,7 +37,39 @@ namespace GUI
             }
         }
 
-        private void dtg_mausac1_CellClick(object sender, DataGridViewCellEventArgs e)
+
+        private void txt_timkiemmausac_TextChanged_1(object sender, EventArgs e)
+        {
+            string timkiem = txt_timkiemmausac.Text;
+            LoadDataGrid2(ser.TimKiemMau(timkiem));
+        }
+
+        private void btn_add13_Click_1(object sender, EventArgs e)
+        {
+            var ten = txt_mausac1.Text;
+
+            if (!ser.CreateMauSacSP(ten))
+            {
+                MessageBox.Show("Bị Trùng Thông Tin");
+                return;
+            }
+
+            LoadDataGrid2(ser.GetAllMauSac());
+        }
+
+        private void btn_sua13_Click_1(object sender, EventArgs e)
+        {
+            var id = seletedid;
+            var ten = txt_mausac1.Text;
+            if (!ser.UpdateMauSacSP(id, ten))
+            {
+                MessageBox.Show("Bị Trùng Thông Tin");
+                return;
+            }
+            LoadDataGrid2(ser.GetAllMauSac());
+        }
+
+        private void dtg_mausac1_CellClick_1(object sender, DataGridViewCellEventArgs e)
         {
             if (e.RowIndex >= 0)
             {
@@ -56,31 +88,6 @@ namespace GUI
 
                 txt_mausac1.Text = cellvalue.ContainsKey("1") ? cellvalue["1"].ToString() : string.Empty;
             }
-        }
-
-        private void btn_add13_Click(object sender, EventArgs e)
-        {
-            var ten = txt_mausac1.Text;
-
-            if (!ser.CreateMauSacSP(ten))
-            {
-                MessageBox.Show("Bị Trùng Thông Tin");
-                return;
-            }
-
-            LoadDataGrid2(ser.GetAllMauSac());
-        }
-
-        private void btn_sua13_Click(object sender, EventArgs e)
-        {
-            var id = seletedid;
-            var ten = txt_mausac1.Text;
-            if (!ser.UpdateMauSacSP(id, ten))
-            {
-                MessageBox.Show("Bị Trùng Thông Tin");
-                return;
-            }
-            LoadDataGrid2(ser.GetAllMauSac());
         }
     }
 }

@@ -52,13 +52,13 @@ namespace GUI
 
         private void button8_Click(object sender, EventArgs e)
         {
-            var kichco = _serviceProvider.GetRequiredService<KichCo1>();
+            var kichco = _serviceProvider.GetRequiredService<KichCo2>();
             ShowFormInPanel(kichco);
         }
 
         private void button7_Click(object sender, EventArgs e)
         {
-            var mausac = _serviceProvider.GetRequiredService<MauSac1>();
+            var mausac = _serviceProvider.GetRequiredService<MauSac2>();
             ShowFormInPanel(mausac);
         }
 

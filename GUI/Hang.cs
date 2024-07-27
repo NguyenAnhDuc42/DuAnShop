@@ -88,5 +88,11 @@ namespace GUI
             }
             LoadDataGrid1(ser.GetAllHang());
         }
+
+        private void txt_timkiemhang_TextChanged(object sender, EventArgs e)
+        {
+            string timkiem = txt_timkiemhang.Text;
+            LoadDataGrid1(ser.TimKiemHang(timkiem));
+        }
     }
 }

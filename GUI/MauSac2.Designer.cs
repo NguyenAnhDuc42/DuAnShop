@@ -31,7 +31,6 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MauSac2));
             panel1 = new Panel();
             label3 = new Label();
-            label2 = new Label();
             button2 = new Button();
             txt_timkiemmausac = new TextBox();
             txt_mausac1 = new TextBox();
@@ -52,7 +51,6 @@
             panel1.BackColor = SystemColors.ButtonHighlight;
             panel1.BorderStyle = BorderStyle.FixedSingle;
             panel1.Controls.Add(label3);
-            panel1.Controls.Add(label2);
             panel1.Controls.Add(button2);
             panel1.Controls.Add(txt_timkiemmausac);
             panel1.Controls.Add(txt_mausac1);
@@ -69,15 +67,6 @@
             label3.Size = new Size(77, 25);
             label3.TabIndex = 81;
             label3.Text = "Màu sắc";
-            // 
-            // label2
-            // 
-            label2.AutoSize = true;
-            label2.Location = new Point(398, 46);
-            label2.Name = "label2";
-            label2.Size = new Size(84, 25);
-            label2.TabIndex = 80;
-            label2.Text = "Tìm kiếm";
             // 
             // button2
             // 
@@ -205,7 +194,6 @@
         private Button btn_sua13;
         private Label label1;
         private Button button2;
-        private Label label2;
         private Label label3;
     }
 }

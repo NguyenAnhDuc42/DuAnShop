@@ -270,12 +270,12 @@ namespace BUS.Service
 
         public IEnumerable<HangSanPham> TimKiemHang(string timkiemhang)
         {
-            return repos.Find(hsp => hsp.TenHang.Contains(timkiemhang));
+            return repos.Find(hsp => hsp.TenHang.StartsWith(timkiemhang, StringComparison.OrdinalIgnoreCase));
         }
 
         public IEnumerable<MauSac> TimKiemMau(string timkiemmau)
         {
-            return repos.Find(mc => mc.MauSac1.Contains(timkiemmau));
+            return repos.Find(mc => mc.MauSac1.StartsWith(timkiemmau, StringComparison.OrdinalIgnoreCase));
         }
 
         public IEnumerable<KichCo> TimKiemKichCo(string timkiemkichco)
@@ -284,16 +284,17 @@ namespace BUS.Service
             {
                 return repos.GetAllKichCo();
             }
+
             var timkiemLower = timkiemkichco.Trim().ToLower();
 
             return repos.Find(kc =>
-                kc.KichCo1.ToString().Contains(timkiemLower));
+                kc.KichCo1.ToString().ToLower().Contains(timkiemLower));
 
         }
 
         public IEnumerable<GioiTinh> TimKiemGioiTinh(string timkiemgioitinh)
         {
-            return repos.Find(gt => gt.TenGioiTinh.Contains(timkiemgioitinh));
+            return repos.Find(gt => gt.TenGioiTinh.StartsWith(timkiemgioitinh, StringComparison.OrdinalIgnoreCase));
         }
 
         public IEnumerable<GiamGium> TimKiemGiamGia(string timkiemgiamgia)

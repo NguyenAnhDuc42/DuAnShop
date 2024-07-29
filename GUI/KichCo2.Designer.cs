@@ -36,7 +36,6 @@
             txt_kichco = new TextBox();
             txt_timkiemkichco = new TextBox();
             panel1 = new Panel();
-            label3 = new Label();
             button2 = new Button();
             panel2 = new Panel();
             panel3 = new Panel();
@@ -109,7 +108,6 @@
             // 
             panel1.BackColor = SystemColors.ControlLightLight;
             panel1.BorderStyle = BorderStyle.FixedSingle;
-            panel1.Controls.Add(label3);
             panel1.Controls.Add(button2);
             panel1.Controls.Add(txt_timkiemkichco);
             panel1.Controls.Add(label1);
@@ -118,15 +116,6 @@
             panel1.Name = "panel1";
             panel1.Size = new Size(919, 731);
             panel1.TabIndex = 24;
-            // 
-            // label3
-            // 
-            label3.AutoSize = true;
-            label3.Location = new Point(387, 49);
-            label3.Name = "label3";
-            label3.Size = new Size(84, 25);
-            label3.TabIndex = 83;
-            label3.Text = "Tìm kiếm";
             // 
             // button2
             // 
@@ -192,6 +181,5 @@
         private Panel panel2;
         private Panel panel3;
         private Button button2;
-        private Label label3;
     }
 }

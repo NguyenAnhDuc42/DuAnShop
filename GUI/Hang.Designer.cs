@@ -41,7 +41,6 @@
             label6 = new Label();
             label5 = new Label();
             label4 = new Label();
-            label3 = new Label();
             button2 = new Button();
             panel2 = new Panel();
             panel3 = new Panel();
@@ -133,7 +132,6 @@
             panel1.Controls.Add(label6);
             panel1.Controls.Add(label5);
             panel1.Controls.Add(label4);
-            panel1.Controls.Add(label3);
             panel1.Controls.Add(button2);
             panel1.Controls.Add(txt_diachi1);
             panel1.Controls.Add(txt_timkiemhang);
@@ -168,15 +166,6 @@
             label4.Name = "label4";
             label4.Size = new Size(0, 25);
             label4.TabIndex = 82;
-            // 
-            // label3
-            // 
-            label3.AutoSize = true;
-            label3.Location = new Point(403, 44);
-            label3.Name = "label3";
-            label3.Size = new Size(84, 25);
-            label3.TabIndex = 81;
-            label3.Text = "Tìm kiếm";
             // 
             // button2
             // 
@@ -248,7 +237,6 @@
         private Panel panel2;
         private Panel panel3;
         private Button button2;
-        private Label label3;
         private Label label4;
         private Label label6;
         private Label label5;

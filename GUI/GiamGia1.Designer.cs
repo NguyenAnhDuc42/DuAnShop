@@ -36,7 +36,6 @@
             label5 = new Label();
             label4 = new Label();
             button2 = new Button();
-            label2 = new Label();
             txt_timkiemgiamgia = new TextBox();
             txt_loaigiamgia1 = new TextBox();
             txt_mucgiam1 = new TextBox();
@@ -66,7 +65,6 @@
             panel1.Controls.Add(label5);
             panel1.Controls.Add(label4);
             panel1.Controls.Add(button2);
-            panel1.Controls.Add(label2);
             panel1.Controls.Add(txt_timkiemgiamgia);
             panel1.Controls.Add(txt_loaigiamgia1);
             panel1.Controls.Add(txt_mucgiam1);
@@ -135,21 +133,12 @@
             button2.TabIndex = 78;
             button2.UseVisualStyleBackColor = true;
             // 
-            // label2
-            // 
-            label2.AutoSize = true;
-            label2.Location = new Point(333, 48);
-            label2.Name = "label2";
-            label2.Size = new Size(84, 25);
-            label2.TabIndex = 76;
-            label2.Text = "Tìm kiếm";
-            // 
             // txt_timkiemgiamgia
             // 
             txt_timkiemgiamgia.BorderStyle = BorderStyle.FixedSingle;
-            txt_timkiemgiamgia.Location = new Point(423, 45);
+            txt_timkiemgiamgia.Location = new Point(487, 45);
             txt_timkiemgiamgia.Name = "txt_timkiemgiamgia";
-            txt_timkiemgiamgia.Size = new Size(405, 31);
+            txt_timkiemgiamgia.Size = new Size(341, 31);
             txt_timkiemgiamgia.TabIndex = 75;
             txt_timkiemgiamgia.TextChanged += txt_timkiemgiamgia_TextChanged_1;
             // 
@@ -301,7 +290,6 @@
         private Label label3;
         private Label label1;
         private DataGridView dtg_giamgia1;
-        private Label label2;
         private Label label8;
         private Label label7;
         private Label label6;
